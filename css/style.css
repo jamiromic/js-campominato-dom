@@ -1,0 +1,121 @@
+/*Regole di Reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+img {
+    max-width: 100%;
+
+}
+
+ul,
+ol,
+menu {
+
+    list-style: none;
+
+}
+
+/* Header Start */
+
+header {
+    display: flex;
+}
+
+.title {
+    display: flex;
+}
+
+.title_header {
+    align-self: center;
+    font-size: 2rem;
+}
+
+.logo {
+    width: 10%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-right: 1rem;
+}
+
+.level {
+    width: 150px;
+}
+
+
+
+
+/* Header End */
+
+/* Main Start */
+
+main {
+    background-color: #7FFFD4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 14rem;
+}
+
+.grid_table {
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    flex-basis: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.easy {
+    grid-template-columns: repeat(10,1fr);
+}
+
+.hard {
+    grid-template-columns: repeat(7,1fr);
+}
+
+
+.cells {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    aspect-ratio: 1/1;
+}
+
+/* Questa classe viene generata per dare al click il cambio di colore della cella */
+.nobomb {
+    background-color: #16166D;
+    color: white;
+}
+
+.bomb {
+    background-color: #850606;
+    color: white;
+}
+
+/* Main End */
+
+/* Footer Start */
+
+footer {
+
+    display: flex;
+    gap: 0.50rem;
+    padding: 1.25rem 1rem;
+    
+}
+
+/* Footer End */
+
+
+
