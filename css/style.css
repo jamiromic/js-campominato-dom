@@ -48,7 +48,18 @@ header {
 }
 
 .level {
-    width: 150px;
+    width: 100px;
+    background-color: #E6E6EA;
+    border-radius: 5px;
+    padding: 0.10rem;
+}
+
+.button_play {
+
+    background-color: #FFC107;
+    border: none;
+    padding: 0.35rem;
+    border-radius: 10%;
 }
 
 
@@ -60,9 +71,6 @@ header {
 
 main {
     background-color: #7FFFD4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 4rem 14rem;
 }
 
@@ -101,6 +109,12 @@ main {
 .bomb {
     background-color: #850606;
     color: white;
+}
+
+.result {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.50rem;
 }
 
 /* Main End */

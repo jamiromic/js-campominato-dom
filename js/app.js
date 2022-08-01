@@ -13,6 +13,13 @@ const gameLevel = document.querySelector('.level');
 // Prendo Griglia da DOM
 const gridTable = document.querySelector('.grid_table');
 
+// Prendo Contenitore con Risultato dal DOM
+const resultIsBomb = document.querySelector('.result')
+
+// Inizializzo variabile con punteggio
+let gameScore = 0;
+
+
 
 
 
@@ -24,6 +31,8 @@ const gridTable = document.querySelector('.grid_table');
 // Inserisco Evento Click sul Button
 submitGameLevel.addEventListener('click', function() {
 
+    // Reset del punteggio
+    gameScore = 0;
 
     // Svuoto il contenuto della griglia ad ogni click
     gridTable.innerHTML = '';
@@ -95,7 +104,7 @@ submitGameLevel.addEventListener('click', function() {
 
 // CICLO FOR PER APPENDERE ELEMENTI AL DOM START
 
-console.log(getMeBomb);
+
 
 // Creo un ciclo FOR in cui ad ogni iterazione in cui grazie alla funzione getElementGrid ad ogni iterazione creerà un div con una classe"
 for (let i = 0; i < numberCells; i++) {
@@ -114,17 +123,56 @@ for (let i = 0; i < numberCells; i++) {
     // Inserisco l'evento click su ogni cella
     cells.addEventListener('click', function(){
 
-        if(cells[i] === getMeBomb[i]) {
-            console.log(getMeBomb)
+
+        let clikedCell = (parseInt(cells.innerHTML));
+
+        
+
+        // Inserisco If ed indico cosa fare se la cella cliccata è una bomba
+        if (getMeBomb.includes(clikedCell)) {
+
+            // Dico ad ogni singola cella di cambiare colore al click
+            cells.classList.add('bomb');
+
+            resultIsBomb.innerHTML = 'Mi dispiace, hai perso, il tuo punteggio è :' + (gameScore)
+
+            cells.removeEventListener('click',);
+            
+
+
+
+
+
+
+         
+        
+        } else {
+
+
+            // Dico ad ogni singola cella di cambiare colore al click
+            cells.classList.add('nobomb');
+
+            // Incremento il punteggio ogni qualvolta non trovo la bomba
+            gameScore++;
+        
         }
 
-        // Dico ad ogni singola cella di cambiare colore al click
-        cells.classList.add('nobomb');
+        
+
+
+
+        
+
+        
+
 
         
     })
 
     // ADDEVENTLISTENER CLICK SU SINGOLA CELLA  END
+
+
+
 
 }
 
@@ -175,6 +223,7 @@ function createBomb(max) {
 } 
 
 
+
 // FUNZIONE PER CREAZIONE ARRAY BOMBE END
 
 
@@ -197,3 +246,4 @@ function getElementGrid() {
 }
 
 // FUNZIONE CREAZIONE DIV CON CLASSE CELLS END
+
