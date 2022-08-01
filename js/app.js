@@ -135,15 +135,6 @@ for (let i = 0; i < numberCells; i++) {
             cells.classList.add('bomb');
 
             resultIsBomb.innerHTML = 'Mi dispiace, hai perso, il tuo punteggio è :' + (gameScore)
-
-            cells.removeEventListener('click',);
-            
-
-
-
-
-
-
          
         
         } else {
